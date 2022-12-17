@@ -10,8 +10,13 @@
 
 function local_hello_message_before_footer()
 {
-    $today = date('l, d F Y');
-    $message = "Today is " . $today . ".<br> Start your learning session by saying Basmallah.";
-    $type = \core\output\notification::NOTIFY_INFO;
-    \core\notification::add($message, $type);
+    global $PAGE;
+    $link_array = explode('/', $PAGE->url);
+    if (end($link_array) == "courses.php") {
+        $today = date('l, d F Y');
+        $message = "Today is " . $today . ".<br> Start your learning session by saying Basmallah.";
+
+        $type = \core\output\notification::NOTIFY_INFO;
+        \core\notification::add($message, $type);
+    }
 }
