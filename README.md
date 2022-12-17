@@ -4,7 +4,7 @@
 
 ## Feature
 - Show the day and current date
-- Show a message to the user
+- Show a message to the user on the course page
 
 ## How to install
 - Clone / copy this repo to directory Moodle/local
